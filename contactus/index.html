@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Laughlaunch - Contact Us</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9c1d9;
+            color: #000;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        h1, h2 {
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        /* Container Styling */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .black-section {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .white-section {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* Form Styling */
+        .contact-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #000;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .contact-form button {
+            padding: 15px 30px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .contact-form button:hover {
+            background-color: #444;
+        }
+
+        /* Contact Details */
+        .contact-details {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .contact-details p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .whatsapp-link {
+            color: #25D366;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .whatsapp-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .contact-form {
+                padding: 15px;
+            }
+
+            h1, h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="black-section section">
+        <h1>Welcome to Laughlaunch</h1>
+        <p>We simplify brand management and support content creators with streamlined services.</p>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="white-section section">
+        <div class="container">
+            <div class="contact-form">
+                <h2>Contact Us</h2>
+                <form action="/submit" method="POST">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <!-- CAPTCHA (for protection against bots) -->
+                    <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Information Section -->
+    <div class="black-section section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-details">
+                
+                <p>Message us on <a href="https://wa.me/13235235018" class="whatsapp-link" target="_blank">WhatsApp</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Copyright &copy; 2024 Laughlaunch. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript to Encode Phone Number -->
+    <script>
+        // Phone number obfuscation
+        var part1 = "+1";
+        var part2 = "(555)";
+        var part3 = "123-4567";
+        document.getElementById('phone').innerText = part1 + " " + part2 + " " + part3;
+    </script>
+
+</body>
+</html>
